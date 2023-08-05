@@ -24,7 +24,7 @@ const runningSum = arr => {
     return res
   };
 
-//   const arr = [1,2,3,4]; 
+//   const arr = [1,2,3,4];
 // console.log(runningSum(arr))
 
 const evenNumOfChars = arr => {
@@ -36,29 +36,57 @@ const evenNumOfChars = arr => {
   return count
 };
 
-// const arr = ['ab', 'abc', 'a', 'abcd']; 
+// const arr = ['ab', 'abc', 'a', 'abcd'];
 // console.log(evenNumOfChars(arr))
 
 const smallerThanCurr = arr => {
 
-  
+
+
+
 
 };
 
 const twoSum = (arr, target) => {
+  let diff = []
 
-  // Your code here
+  arr.forEach(el => {
+    diff.push(target - el)
+    if (arr.includes(diff)) {
+      return true
+    }
+  })
+  return false
 };
+
+// const arr = [4, 2, 3, 6, 9];
+// console.log(twoSum(arr, 10)); // => True
+
+// const arr2 = [4, 2, 3, 6, 9];
+// console.log(twoSum(arr2, 16)); // => False
 
 const secondLargest = arr => {
 
-  // Your code here
+  let sorted = arr.sort()
+  return sorted[arr.length -2]
+
 };
+
+// const arr = [4, 2, 3, 6, 8];
+// console.log(secondLargest(arr)); // => 6
 
 const shuffle = (arr) => {
+  let res = []
 
-  // Your code here
+  arr.forEach(num => {
+    res.push(Math.floor(Math.random() * num))
+  })
+  console.log(res)
+
 };
+
+const arr = [2, 5, 1, 3, 4, 7];
+console.log(shuffle(arr)); // => [2, 3, 5, 4, 1, 7]
 
 
 module.exports = [findMinimum, runningSum, evenNumOfChars, smallerThanCurr, twoSum, secondLargest, shuffle];
