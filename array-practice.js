@@ -6,7 +6,15 @@ const findMinimum = arr => {
 
 const runningSum = arr => {
 
-  // Your code here
+  const final = [];
+
+    arr.reduce((prev, next) => {
+        const sum = prev + next;
+        final.push(sum);
+        return sum;
+    }, 0);
+
+    return final;
 };
 
 const evenNumOfChars = arr => {
