@@ -18,6 +18,18 @@ const runningSum = arr => {
   arr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
 
 
+<<<<<<< HEAD
+=======
+  const final = [];
+
+    arr.reduce((prev, next) => {
+        const sum = prev + next;
+        final.push(sum);
+        return sum;
+    }, 0);
+
+    return final;
+>>>>>>> e0248dbc4d19811700d077787cd6130035e7dfe9
 };
 
 const evenNumOfChars = arr => {
