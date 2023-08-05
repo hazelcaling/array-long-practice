@@ -1,12 +1,23 @@
 const findMinimum = arr => {
+  let smallest = arr[0]
 
-  // Your code here
-
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = i
+    }
+  }
+  return smallest
 };
 
-const runningSum = arr => {
+// const arr = [7, 5, 2, 3, 4, 1];
+// console.log(findMinimum(arr)); // => 1
 
-  // Your code here
+const runningSum = arr => {
+  let res = []
+
+  arr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+
+
 };
 
 const evenNumOfChars = arr => {
