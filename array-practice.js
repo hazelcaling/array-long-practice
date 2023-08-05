@@ -15,31 +15,33 @@ const findMinimum = arr => {
 const runningSum = arr => {
   let res = []
 
-  arr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
-
-
-<<<<<<< HEAD
-=======
-  const final = [];
-
     arr.reduce((prev, next) => {
         const sum = prev + next;
-        final.push(sum);
+        res.push(sum);
         return sum;
     }, 0);
 
-    return final;
->>>>>>> e0248dbc4d19811700d077787cd6130035e7dfe9
-};
+    return res
+  };
+
+//   const arr = [1,2,3,4]; 
+// console.log(runningSum(arr))
 
 const evenNumOfChars = arr => {
+  let count = 0;
+  arr.forEach(el => {
+    if (el.length % 2 === 0) count++
 
-  // Your code here
+  });
+  return count
 };
+
+// const arr = ['ab', 'abc', 'a', 'abcd']; 
+// console.log(evenNumOfChars(arr))
 
 const smallerThanCurr = arr => {
 
-  // Your code here
+  
 
 };
 
