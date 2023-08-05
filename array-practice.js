@@ -48,15 +48,15 @@ const smallerThanCurr = arr => {
 };
 
 const twoSum = (arr, target) => {
-  let diff = []
-
+  
+let boo = false
   arr.forEach(el => {
-    diff.push(target - el)
+    let diff = target - el
     if (arr.includes(diff)) {
-      return true
+      let boo = true
     }
   })
-  return false
+  return boo
 };
 
 // const arr = [4, 2, 3, 6, 9];
